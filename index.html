@@ -332,15 +332,11 @@
             box-shadow: 0 12px 35px rgba(122, 139, 111, 0.1);
         }
 
-        .video-thumbnail {
+        .video-thumbnail img {
             width: 100%;
             aspect-ratio: 16 / 9;
-            background: linear-gradient(135deg, var(--cor-leve), var(--cor-destaque));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            color: white;
+            object-fit: cover;
+            display: block;
         }
 
         .video-info {
@@ -566,7 +562,7 @@
             <div class="plataformas-grid">
                 <a href="https://open.spotify.com/artist/3SjQFPEkSzaMRbcIBkfqlY?si=dgIFy8KqSHW8qfN5OY8ekw&utm_source=copy-link" target="_blank" class="card-plataforma">
                     <div class="card-plataforma-icon">
-                        <img src="https://cdn-icons-png.flaticon.com/512/174/174872.png" alt="Spotify">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/1200px-Spotify_logo_without_text.svg.png" alt="Spotify">
                     </div>
                     <div class="card-plataforma-nome">Spotify</div>
                     <div class="card-plataforma-desc">Ouça todos os lançamentos</div>
@@ -574,7 +570,7 @@
 
                 <a href="https://www.youtube.com/@vozviolaoefe" target="_blank" class="card-plataforma">
                     <div class="card-plataforma-icon">
-                        <img src="https://cdn-icons-png.flaticon.com/512/174/174883.png" alt="YouTube">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/1280px-YouTube_full-color_icon_%282017%29.svg.png" alt="YouTube">
                     </div>
                     <div class="card-plataforma-nome">YouTube</div>
                     <div class="card-plataforma-desc">Vídeos e clipes</div>
@@ -582,7 +578,7 @@
 
                 <a href="https://www.deezer.com/br/artist/71534322" target="_blank" class="card-plataforma">
                     <div class="card-plataforma-icon">
-                        <img src="https://cdn-icons-png.flaticon.com/512/3669/3669551.png" alt="Deezer">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Deezer_logo.svg/1200px-Deezer_logo.svg.png" alt="Deezer">
                     </div>
                     <div class="card-plataforma-nome">Deezer</div>
                     <div class="card-plataforma-desc">Ouça em alta qualidade</div>
@@ -590,7 +586,7 @@
 
                 <a href="https://music.apple.com/us/artist/eduardo-rodriguess/1832821292" target="_blank" class="card-plataforma">
                     <div class="card-plataforma-icon">
-                        <img src="https://cdn-icons-png.flaticon.com/512/174/174825.png" alt="Apple Music">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Apple_Music_logo.svg/1200px-Apple_Music_logo.svg.png" alt="Apple Music">
                     </div>
                     <div class="card-plataforma-nome">Apple Music</div>
                     <div class="card-plataforma-desc">Na sua biblioteca</div>
@@ -598,7 +594,7 @@
 
                 <a href="https://music.amazon.com.br/albums/B0H6QWJ13Z?marketplaceId=A2Q3Y263D00KWC&musicTerritory=BR&ref=dm_sh_j13QAL4eUYYMZ3dIWcHDC6mSY" target="_blank" class="card-plataforma">
                     <div class="card-plataforma-icon">
-                        <img src="https://cdn-icons-png.flaticon.com/512/174/174851.png" alt="Amazon Music">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Amazon_Music_icon.svg/1200px-Amazon_Music_icon.svg.png" alt="Amazon Music">
                     </div>
                     <div class="card-plataforma-nome">Amazon Music</div>
                     <div class="card-plataforma-desc">Explore e salve</div>
@@ -638,7 +634,9 @@
             
             <div class="videos-container">
                 <a href="https://youtu.be/-4uZ4qxY_MQ?si=s8cGk9aA4T2QxJKQ" target="_blank" class="card-video">
-                    <div class="video-thumbnail">🎬</div>
+                    <div class="video-thumbnail">
+                        <img src="https://img.youtube.com/vi/-4uZ4qxY_MQ/maxresdefault.jpg" alt="Te Encontro Perto">
+                    </div>
                     <div class="video-info">
                         <div class="video-titulo">Te Encontro Perto | Lyric Video Oficial</div>
                         <div class="video-duracao">2:50 • Lançamento recente</div>
@@ -647,7 +645,9 @@
                 </a>
 
                 <a href="https://youtu.be/-RV7wLPwgoU?si=WQ-ASMA4ToipKNHg" target="_blank" class="card-video">
-                    <div class="video-thumbnail">🎬</div>
+                    <div class="video-thumbnail">
+                        <img src="https://img.youtube.com/vi/-RV7wLPwgoU/maxresdefault.jpg" alt="De que adianta construir sem Deus?">
+                    </div>
                     <div class="video-info">
                         <div class="video-titulo">De que adianta construir sem Deus? (Salmo 127)</div>
                         <div class="video-duracao">3:11 • Reflexão</div>
@@ -656,7 +656,9 @@
                 </a>
 
                 <a href="https://youtu.be/vny0OrKN9Zc?si=ZOWZHIR0thw5_Yd0" target="_blank" class="card-video">
-                    <div class="video-thumbnail">🎬</div>
+                    <div class="video-thumbnail">
+                        <img src="https://img.youtube.com/vi/vny0OrKN9Zc/maxresdefault.jpg" alt="Enquanto Podemos">
+                    </div>
                     <div class="video-info">
                         <div class="video-titulo">Enquanto Podemos (João 12:35)</div>
                         <div class="video-duracao">2:40 • Mensagem</div>
@@ -674,7 +676,7 @@
             <div class="redes-grid">
                 <a href="https://www.instagram.com/vozviolaoefe/" target="_blank" class="card-rede">
                     <div class="card-rede-icon">
-                        <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png" alt="Instagram">
                     </div>
                     <div class="card-rede-nome">Instagram</div>
                     <div class="card-rede-desc">Bastidores e momentos</div>
@@ -682,7 +684,7 @@
 
                 <a href="https://www.tiktok.com/@vozviolaoefe" target="_blank" class="card-rede">
                     <div class="card-rede-icon">
-                        <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/TikTok_logo.svg/2048px-TikTok_logo.svg.png" alt="TikTok">
                     </div>
                     <div class="card-rede-nome">TikTok</div>
                     <div class="card-rede-desc">Cortes e conteúdos rápidos</div>
@@ -690,7 +692,7 @@
 
                 <a href="https://www.youtube.com/@vozviolaoefe" target="_blank" class="card-rede">
                     <div class="card-rede-icon">
-                        <img src="https://cdn-icons-png.flaticon.com/512/174/174883.png" alt="YouTube">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/1280px-YouTube_full-color_icon_%282017%29.svg.png" alt="YouTube">
                     </div>
                     <div class="card-rede-nome">YouTube</div>
                     <div class="card-rede-desc">Vídeos completos</div>
@@ -698,7 +700,7 @@
 
                 <a href="https://whatsapp.com/channel/0029VamNEy92975KFtU2be0I" target="_blank" class="card-rede">
                     <div class="card-rede-icon">
-                        <img src="https://cdn-icons-png.flaticon.com/512/174/174877.png" alt="WhatsApp">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1200px-WhatsApp.svg.png" alt="WhatsApp">
                     </div>
                     <div class="card-rede-nome">Canal do WhatsApp</div>
                     <div class="card-rede-desc">Reflexões e avisos exclusivos</div>
