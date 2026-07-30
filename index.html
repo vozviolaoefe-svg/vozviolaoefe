@@ -244,8 +244,9 @@
             border-color: var(--cor-destaque);
         }
 
-        .card-plataforma-icon {
-            font-size: 3rem;
+        .card-plataforma-icon img {
+            width: 60px;
+            height: auto;
             margin-bottom: 1rem;
         }
 
@@ -402,8 +403,9 @@
             border-color: var(--cor-destaque);
         }
 
-        .card-rede-icon {
-            font-size: 2.5rem;
+        .card-rede-icon img {
+            width: 50px;
+            height: auto;
             margin-bottom: 1rem;
         }
 
@@ -530,186 +532,204 @@
         </nav>
     </header>
 
-    <!-- CAPA -->
-    <section id="capa">
-        <div class="logo-capa">
-            <img src="capa.jpg" alt="Eduardo Rodriguess - Voz, Violão e Fé">
-        </div>
-        <h1 class="titulo-principal">Voz, Violão e Fé</h1>
-        <p class="frase-principal">Canções e reflexões inspiradas na Palavra de Deus</p>
-        <button class="btn-primario" onclick="document.getElementById('plataformas').scrollIntoView({behavior: 'smooth'})">Ouça agora</button>
-        <div class="scroll-indicator">↓</div>
-    </section>
-
-    <!-- SOBRE O PROJETO -->
-    <section id="sobre">
-        <h2 class="secao-titulo">Sobre o Projeto</h2>
-        <div class="sobre-conteudo">
-            <p>O <strong>Voz, Violão e Fé</strong> nasceu do desejo de transformar a Palavra de Deus em canções e reflexões que acompanhem as pessoas em sua caminhada de fé.</p>
-            
-            <p>Aqui você encontrará músicas autorais, interpretações e mensagens inspiradas na Bíblia, todas com um mesmo propósito: <em>conduzir o coração para mais perto de Deus.</em></p>
-            
-            <div class="sobre-versículo">
-                "Buscar-me-eis e me achareis quando me buscardes de todo o vosso coração." <br>
-                <strong>Jeremias 29:13</strong>
+        <!-- CAPA -->
+        <section id="capa">
+            <div class="logo-capa">
+                <img src="capa.jpg" alt="Eduardo Rodriguess - Voz, Violão e Fé">
             </div>
-        </div>
-    </section>
+            <h1 class="titulo-principal">Voz, Violão e Fé</h1>
+            <p class="frase-principal">Canções e reflexões inspiradas na Palavra de Deus</p>
+            <button class="btn-primario" onclick="document.getElementById('plataformas').scrollIntoView({behavior: 'smooth'})">Ouça agora</button>
+            <div class="scroll-indicator">↓</div>
+        </section>
 
-    <!-- OUÇA NAS PLATAFORMAS -->
-    <section id="plataformas">
-        <h2 class="secao-titulo">🎵 Ouça nas Plataformas</h2>
-        <p class="secao-subtitulo">Escolha a sua plataforma favorita e leve estas canções com você, onde estiver.</p>
-        
-        <div class="plataformas-grid">
-            <a href="https://open.spotify.com/artist/3SjQFPEkSzaMRbcIBkfqlY?si=dgIFy8KqSHW8qfN5OY8ekw&utm_source=copy-link" target="_blank" class="card-plataforma">
-                <div class="card-plataforma-icon">🎧</div>
-                <div class="card-plataforma-nome">Spotify</div>
-                <div class="card-plataforma-desc">Ouça todos os lançamentos</div>
-            </a>
-
-            <a href="https://www.youtube.com/@vozviolaoefe" target="_blank" class="card-plataforma">
-                <div class="card-plataforma-icon">▶️</div>
-                <div class="card-plataforma-nome">YouTube</div>
-                <div class="card-plataforma-desc">Vídeos e clipes</div>
-            </a>
-
-            <a href="https://www.deezer.com/br/artist/71534322" target="_blank" class="card-plataforma">
-                <div class="card-plataforma-icon">🎵</div>
-                <div class="card-plataforma-nome">Deezer</div>
-                <div class="card-plataforma-desc">Ouça em alta qualidade</div>
-            </a>
-
-            <a href="https://music.apple.com/us/artist/eduardo-rodriguess/1832821292" target="_blank" class="card-plataforma">
-                <div class="card-plataforma-icon">🍎</div>
-                <div class="card-plataforma-nome">Apple Music</div>
-                <div class="card-plataforma-desc">Na sua biblioteca</div>
-            </a>
-
-            <a href="https://music.amazon.com.br/albums/B0H6QWJ13Z?marketplaceId=A2Q3Y263D00KWC&musicTerritory=BR&ref=dm_sh_j13QAL4eUYYMZ3dIWcHDC6mSY" target="_blank" class="card-plataforma">
-                <div class="card-plataforma-icon">📦</div>
-                <div class="card-plataforma-nome">Amazon Music</div>
-                <div class="card-plataforma-desc">Explore e salve</div>
-            </a>
-        </div>
-    </section>
-
-    <!-- REFLEXÃO SEMANAL -->
-    <section id="reflexao">
-        <h2 class="secao-titulo">📖 Uma Palavra para Esta Semana</h2>
-        <p class="secao-subtitulo">Uma breve pausa para meditar na Palavra de Deus</p>
-        
-        <div class="card-reflexao">
-            <div class="reflexao-data">Semana 31 • Julho de 2026</div>
-            
-            <div class="reflexao-versiculo">
-                "Assim disse o SENHOR: Na hora da graça, te ouvi; no dia da salvação, te socorri."<br>
-                <strong>Isaías 49:8</strong>
-            </div>
-            
-            <div class="reflexao-meditacao">
-                Às vezes sentimos que Deus está longe, que nossas orações não chegam até Ele. Mas esta promessa nos assegura que Ele sempre nos ouve. No tempo certo, na Sua hora, o Senhor responde. Confie nesta certeza hoje.
-            </div>
-            
-            <div class="reflexao-final">🙏</div>
-            
-            <div style="text-align: center; margin-top: 1.5rem; font-style: italic; font-size: 0.95rem; color: var(--cor-destaque);">
-                Que Deus abençoe a sua caminhada.
-            </div>
-        </div>
-    </section>
-
-    <!-- ÚLTIMOS VÍDEOS -->
-    <section id="videos">
-        <h2 class="secao-titulo">🎥 Últimos Vídeos</h2>
-        <p class="secao-subtitulo">Acompanhe interpretações, canções autorais e reflexões em voz e violão</p>
-        
-        <div class="videos-container">
-            <a href="https://youtu.be/-4uZ4qxY_MQ?si=s8cGk9aA4T2QxJKQ" target="_blank" class="card-video">
-                <div class="video-thumbnail">🎬</div>
-                <div class="video-info">
-                    <div class="video-titulo">Te Encontro Perto | Lyric Video Oficial</div>
-                    <div class="video-duracao">2:50 • Lançamento recente</div>
-                    <button class="btn-video">Assistir</button>
+        <!-- SOBRE O PROJETO -->
+        <section id="sobre">
+            <h2 class="secao-titulo">Sobre o Projeto</h2>
+            <div class="sobre-conteudo">
+                <p>O <strong>Voz, Violão e Fé</strong> nasceu do desejo de transformar a Palavra de Deus em canções e reflexões que acompanhem as pessoas em sua caminhada de fé.</p>
+                
+                <p>Aqui você encontrará músicas autorais, interpretações e mensagens inspiradas na Bíblia, todas com um mesmo propósito: <em>conduzir o coração para mais perto de Deus.</em></p>
+                
+                <div class="sobre-versículo">
+                    "Buscar-me-eis e me achareis quando me buscardes de todo o vosso coração." <br>
+                    <strong>Jeremias 29:13</strong>
                 </div>
-            </a>
+            </div>
+        </section>
 
-            <a href="https://youtu.be/-RV7wLPwgoU?si=WQ-ASMA4ToipKNHg" target="_blank" class="card-video">
-                <div class="video-thumbnail">🎬</div>
-                <div class="video-info">
-                    <div class="video-titulo">De que adianta construir sem Deus? (Salmo 127)</div>
-                    <div class="video-duracao">3:11 • Reflexão</div>
-                    <button class="btn-video">Assistir</button>
+        <!-- OUÇA NAS PLATAFORMAS -->
+        <section id="plataformas">
+            <h2 class="secao-titulo">🎵 Ouça nas Plataformas</h2>
+            <p class="secao-subtitulo">Escolha a sua plataforma favorita e leve estas canções com você, onde estiver.</p>
+            
+            <div class="plataformas-grid">
+                <a href="https://open.spotify.com/artist/3SjQFPEkSzaMRbcIBkfqlY?si=dgIFy8KqSHW8qfN5OY8ekw&utm_source=copy-link" target="_blank" class="card-plataforma">
+                    <div class="card-plataforma-icon">
+                        <img src="https://cdn-icons-png.flaticon.com/512/174/174872.png" alt="Spotify">
+                    </div>
+                    <div class="card-plataforma-nome">Spotify</div>
+                    <div class="card-plataforma-desc">Ouça todos os lançamentos</div>
+                </a>
+
+                <a href="https://www.youtube.com/@vozviolaoefe" target="_blank" class="card-plataforma">
+                    <div class="card-plataforma-icon">
+                        <img src="https://cdn-icons-png.flaticon.com/512/174/174883.png" alt="YouTube">
+                    </div>
+                    <div class="card-plataforma-nome">YouTube</div>
+                    <div class="card-plataforma-desc">Vídeos e clipes</div>
+                </a>
+
+                <a href="https://www.deezer.com/br/artist/71534322" target="_blank" class="card-plataforma">
+                    <div class="card-plataforma-icon">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3669/3669551.png" alt="Deezer">
+                    </div>
+                    <div class="card-plataforma-nome">Deezer</div>
+                    <div class="card-plataforma-desc">Ouça em alta qualidade</div>
+                </a>
+
+                <a href="https://music.apple.com/us/artist/eduardo-rodriguess/1832821292" target="_blank" class="card-plataforma">
+                    <div class="card-plataforma-icon">
+                        <img src="https://cdn-icons-png.flaticon.com/512/174/174825.png" alt="Apple Music">
+                    </div>
+                    <div class="card-plataforma-nome">Apple Music</div>
+                    <div class="card-plataforma-desc">Na sua biblioteca</div>
+                </a>
+
+                <a href="https://music.amazon.com.br/albums/B0H6QWJ13Z?marketplaceId=A2Q3Y263D00KWC&musicTerritory=BR&ref=dm_sh_j13QAL4eUYYMZ3dIWcHDC6mSY" target="_blank" class="card-plataforma">
+                    <div class="card-plataforma-icon">
+                        <img src="https://cdn-icons-png.flaticon.com/512/174/174851.png" alt="Amazon Music">
+                    </div>
+                    <div class="card-plataforma-nome">Amazon Music</div>
+                    <div class="card-plataforma-desc">Explore e salve</div>
+                </a>
+            </div>
+        </section>
+
+        <!-- REFLEXÃO SEMANAL -->
+        <section id="reflexao">
+            <h2 class="secao-titulo">📖 Uma Palavra para Esta Semana</h2>
+            <p class="secao-subtitulo">Uma breve pausa para meditar na Palavra de Deus</p>
+            
+            <div class="card-reflexao">
+                <div class="reflexao-data">Semana 31 • Julho de 2026</div>
+                
+                <div class="reflexao-versiculo">
+                    "Assim disse o SENHOR: Na hora da graça, te ouvi; no dia da salvação, te socorri."<br>
+                    <strong>Isaías 49:8</strong>
                 </div>
-            </a>
-
-            <a href="https://youtu.be/vny0OrKN9Zc?si=ZOWZHIR0thw5_Yd0" target="_blank" class="card-video">
-                <div class="video-thumbnail">🎬</div>
-                <div class="video-info">
-                    <div class="video-titulo">Enquanto Podemos (João 12:35)</div>
-                    <div class="video-duracao">2:40 • Mensagem</div>
-                    <button class="btn-video">Assistir</button>
+                
+                <div class="reflexao-meditacao">
+                    Às vezes sentimos que Deus está longe, que nossas orações não chegam até Ele. Mas esta promessa nos assegura que Ele sempre nos ouve. No tempo certo, na Sua hora, o Senhor responde. Confie nesta certeza hoje.
                 </div>
-            </a>
-        </div>
-    </section>
+                
+                <div class="reflexao-final">🙏</div>
+                
+                <div style="text-align: center; margin-top: 1.5rem; font-style: italic; font-size: 0.95rem; color: var(--cor-destaque);">
+                    Que Deus abençoe a sua caminhada.
+                </div>
+            </div>
+        </section>
 
-    <!-- CAMINHE CONOSCO -->
-    <section id="redes">
-        <h2 class="secao-titulo">🤝 Caminhe Conosco</h2>
-        <p class="secao-subtitulo">Acompanhe novos lançamentos, reflexões e canções também nas redes sociais</p>
-        
-        <div class="redes-grid">
-            <a href="https://www.instagram.com/vozviolaoefe/" target="_blank" class="card-rede">
-                <div class="card-rede-icon">📷</div>
-                <div class="card-rede-nome">Instagram</div>
-                <div class="card-rede-desc">Bastidores e momentos</div>
-            </a>
+        <!-- ÚLTIMOS VÍDEOS -->
+        <section id="videos">
+            <h2 class="secao-titulo">🎥 Últimos Vídeos</h2>
+            <p class="secao-subtitulo">Acompanhe interpretações, canções autorais e reflexões em voz e violão</p>
+            
+            <div class="videos-container">
+                <a href="https://youtu.be/-4uZ4qxY_MQ?si=s8cGk9aA4T2QxJKQ" target="_blank" class="card-video">
+                    <div class="video-thumbnail">🎬</div>
+                    <div class="video-info">
+                        <div class="video-titulo">Te Encontro Perto | Lyric Video Oficial</div>
+                        <div class="video-duracao">2:50 • Lançamento recente</div>
+                        <button class="btn-video">Assistir</button>
+                    </div>
+                </a>
 
-            <a href="https://www.tiktok.com/@vozviolaoefe" target="_blank" class="card-rede">
-                <div class="card-rede-icon">🎵</div>
-                <div class="card-rede-nome">TikTok</div>
-                <div class="card-rede-desc">Cortes e conteúdos rápidos</div>
-            </a>
+                <a href="https://youtu.be/-RV7wLPwgoU?si=WQ-ASMA4ToipKNHg" target="_blank" class="card-video">
+                    <div class="video-thumbnail">🎬</div>
+                    <div class="video-info">
+                        <div class="video-titulo">De que adianta construir sem Deus? (Salmo 127)</div>
+                        <div class="video-duracao">3:11 • Reflexão</div>
+                        <button class="btn-video">Assistir</button>
+                    </div>
+                </a>
 
-            <a href="https://www.youtube.com/@vozviolaoefe" target="_blank" class="card-rede">
-                <div class="card-rede-icon">▶️</div>
-                <div class="card-rede-nome">YouTube</div>
-                <div class="card-rede-desc">Vídeos completos</div>
-            </a>
+                <a href="https://youtu.be/vny0OrKN9Zc?si=ZOWZHIR0thw5_Yd0" target="_blank" class="card-video">
+                    <div class="video-thumbnail">🎬</div>
+                    <div class="video-info">
+                        <div class="video-titulo">Enquanto Podemos (João 12:35)</div>
+                        <div class="video-duracao">2:40 • Mensagem</div>
+                        <button class="btn-video">Assistir</button>
+                    </div>
+                </a>
+            </div>
+        </section>
 
-            <a href="https://whatsapp.com/channel/0029VamNEy92975KFtU2be0I" target="_blank" class="card-rede">
-                <div class="card-rede-icon">💬</div>
-                <div class="card-rede-nome">Canal do WhatsApp</div>
-                <div class="card-rede-desc">Reflexões e avisos exclusivos</div>
-            </a>
-        </div>
-    </section>
+        <!-- CAMINHE CONOSCO -->
+        <section id="redes">
+            <h2 class="secao-titulo">🤝 Caminhe Conosco</h2>
+            <p class="secao-subtitulo">Acompanhe novos lançamentos, reflexões e canções também nas redes sociais</p>
+            
+            <div class="redes-grid">
+                <a href="https://www.instagram.com/vozviolaoefe/" target="_blank" class="card-rede">
+                    <div class="card-rede-icon">
+                        <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram">
+                    </div>
+                    <div class="card-rede-nome">Instagram</div>
+                    <div class="card-rede-desc">Bastidores e momentos</div>
+                </a>
 
-    <!-- RODAPÉ -->
-    <footer>
-        <div class="rodape-frase">
-            "Que estas canções conduzam o seu coração para mais perto de Deus."
-        </div>
-        <div class="rodape-info">
-            <p>© 2026 Voz, Violão e Fé • Todos os direitos reservados</p>
-            <p style="margin-top: 1rem;">Para contato, acesse nossos canais nas redes sociais</p>
-        </div>
-    </footer>
+                <a href="https://www.tiktok.com/@vozviolaoefe" target="_blank" class="card-rede">
+                    <div class="card-rede-icon">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok">
+                    </div>
+                    <div class="card-rede-nome">TikTok</div>
+                    <div class="card-rede-desc">Cortes e conteúdos rápidos</div>
+                </a>
 
-    <script>
-        // Smooth scroll para links de navegação
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
+                <a href="https://www.youtube.com/@vozviolaoefe" target="_blank" class="card-rede">
+                    <div class="card-rede-icon">
+                        <img src="https://cdn-icons-png.flaticon.com/512/174/174883.png" alt="YouTube">
+                    </div>
+                    <div class="card-rede-nome">YouTube</div>
+                    <div class="card-rede-desc">Vídeos completos</div>
+                </a>
+
+                <a href="https://whatsapp.com/channel/0029VamNEy92975KFtU2be0I" target="_blank" class="card-rede">
+                    <div class="card-rede-icon">
+                        <img src="https://cdn-icons-png.flaticon.com/512/174/174877.png" alt="WhatsApp">
+                    </div>
+                    <div class="card-rede-nome">Canal do WhatsApp</div>
+                    <div class="card-rede-desc">Reflexões e avisos exclusivos</div>
+                </a>
+            </div>
+        </section>
+
+        <!-- RODAPÉ -->
+        <footer>
+            <div class="rodape-frase">
+                "Que estas canções conduzam o seu coração para mais perto de Deus."
+            </div>
+            <div class="rodape-info">
+                <p>© 2026 Voz, Violão e Fé • Todos os direitos reservados</p>
+                <p style="margin-top: 1rem;">Para contato, acesse nossos canais nas redes sociais</p>
+            </div>
+        </footer>
+
+        <script>
+            // Smooth scroll para links de navegação
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
                     target.scrollIntoView({
                         behavior: 'smooth'
                     });
                 }
+                });
             });
-        });
-    </script>
+        </script>
 </body>
 </html>
