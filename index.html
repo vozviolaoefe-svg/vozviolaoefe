@@ -3,309 +3,713 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Voz, Violão e Fé</title>
+    <title>Voz, Violão e Fé — Canções e Reflexões Inspiradas na Palavra de Deus</title>
+    <meta name="description" content="Voz, Violão e Fé — Canções autorais, interpretações e reflexões inspiradas na Bíblia. Transformando a Palavra de Deus em música.">
+    <meta name="theme-color" content="#E8DCC4">
+    
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+
+        :root {
+            --cor-fundo: #F5F1E8;
+            --cor-card: #FFFFFF;
+            --cor-texto: #4A3C2A;
+            --cor-destaque: #7A8B6F;
+            --cor-leve: #E8DCC4;
+            --cor-border: #D4C5B0;
+            --font-titulo: 'Georgia', serif;
+            --font-corpo: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+        }
+
+        html {
             scroll-behavior: smooth;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #F8F4E9;
-            color: #3A2F23;
-            line-height: 1.7;
+            font-family: var(--font-corpo);
+            background-color: var(--cor-fundo);
+            color: var(--cor-texto);
+            line-height: 1.6;
+            overflow-x: hidden;
         }
 
-        h1, h2, h3 {
-            font-family: Georgia, 'Times New Roman', Times, serif;
-            color: #2C2318;
+        a {
+            color: var(--cor-destaque);
+            text-decoration: none;
+            transition: color 0.3s ease;
         }
 
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 24px;
+        a:hover {
+            color: var(--cor-texto);
         }
 
+        /* HEADER / NAVEGAÇÃO */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(245, 241, 232, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 2rem;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--cor-border);
+        }
+
+        .logo-header {
+            font-family: var(--font-titulo);
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--cor-destaque);
+        }
+
+        nav a {
+            margin-left: 2rem;
+            font-size: 0.9rem;
+            color: var(--cor-texto);
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--cor-destaque);
+        }
+
+        /* SEÇÕES */
         section {
-            padding: 80px 0;
+            margin: 0;
+            padding: 4rem 2rem;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
-        /* Capa */
+        section:first-of-type {
+            margin-top: 60px;
+        }
+
+        /* CAPA */
         #capa {
-            min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            min-height: 100vh;
             text-align: center;
-            gap: 24px;
+            padding-top: 6rem;
+            padding-bottom: 4rem;
+            background: linear-gradient(180deg, #F5F1E8 0%, #FBF9F3 100%);
         }
 
-        #capa h1 {
-            font-size: 3.2rem;
-            font-weight: 400;
+        .logo-capa {
+            margin-bottom: 1.5rem;
+            animation: flutuante 3s ease-in-out infinite;
         }
 
-        #capa p {
-            font-size: 1.25rem;
-            max-width: 600px;
+        .logo-capa img {
+            max-width: 380px;
+            width: 100%;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(122, 139, 111, 0.15);
         }
 
-        .btn {
-            display: inline-block;
-            padding: 14px 32px;
-            background-color: #556B2F;
+        @keyframes flutuante {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .titulo-principal {
+            font-family: var(--font-titulo);
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--cor-destaque);
+            letter-spacing: -0.5px;
+        }
+
+        .frase-principal {
+            font-size: 1.3rem;
+            color: var(--cor-texto);
+            margin-bottom: 2rem;
+            font-style: italic;
+            opacity: 0.9;
+        }
+
+        .btn-primario {
+            background-color: var(--cor-destaque);
             color: white;
-            text-decoration: none;
+            padding: 1rem 2.5rem;
+            border: none;
             border-radius: 50px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
             font-weight: 500;
-            transition: background 0.3s ease;
+            letter-spacing: 0.5px;
         }
 
-        .btn:hover {
-            background-color: #3D4F21;
+        .btn-primario:hover {
+            background-color: var(--cor-texto);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(122, 139, 111, 0.2);
         }
 
-        /* Seções gerais */
+        /* SEÇÕES DE CONTEÚDO */
         .secao-titulo {
+            font-family: var(--font-titulo);
             font-size: 2rem;
-            margin-bottom: 32px;
+            margin-bottom: 1.5rem;
+            color: var(--cor-destaque);
             text-align: center;
+        }
+
+        .secao-subtitulo {
+            text-align: center;
+            font-size: 1.1rem;
+            color: var(--cor-texto);
+            opacity: 0.85;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* SOBRE O PROJETO */
+        #sobre {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
         }
 
         .sobre-conteudo {
-            background: white;
-            padding: 40px;
-            border-radius: 16px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-            display: flex;
-            flex-direction: column;
-            gap: 24px;
+            background: var(--cor-card);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid var(--cor-leve);
+            animation: fadeIn 0.6s ease-in;
         }
 
-        .versiculo {
-            font-style: italic;
-            color: #556B2F;
-            text-align: center;
+        .sobre-conteudo p {
             font-size: 1.1rem;
-            margin-top: 16px;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
         }
 
-        /* Cards plataformas */
-        .grid-cards {
+        .sobre-versículo {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 2px solid var(--cor-leve);
+            font-style: italic;
+            color: var(--cor-destaque);
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* PLATAFORMAS */
+        .plataformas-grid {
             display: grid;
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
         }
 
-        .card {
-            background: white;
-            padding: 32px;
-            border-radius: 16px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-            text-decoration: none;
-            color: inherit;
-            transition: transform 0.3s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-4px);
-        }
-
-        .card h3 {
-            margin-bottom: 8px;
-            color: #556B2F;
-        }
-
-        /* Reflexão */
-        .reflexao-card {
-            background: white;
-            padding: 40px;
-            border-radius: 16px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        }
-
-        .data-reflexao {
-            text-align: right;
-            font-size: 0.9rem;
-            color: #7A6A56;
-            margin-bottom: 24px;
-        }
-
-        /* Vídeos */
-        .video-card {
-            background: white;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        }
-
-        .video-placeholder {
-            background-color: #E4E0D5;
-            height: 200px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #7A6A56;
-        }
-
-        .video-info {
-            padding: 24px;
-        }
-
-        .duracao {
-            color: #7A6A56;
-            font-size: 0.9rem;
-            margin: 8px 0 16px;
-        }
-
-        /* Rodapé */
-        footer {
-            background-color: #2C2318;
-            color: #F8F4E9;
+        .card-plataforma {
+            background: var(--cor-card);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid var(--cor-leve);
             text-align: center;
-            padding: 48px 24px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            animation: fadeIn 0.6s ease-in;
         }
 
-        footer p {
-            margin-bottom: 16px;
+        .card-plataforma:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(122, 139, 111, 0.15);
+            border-color: var(--cor-destaque);
+        }
+
+        .card-plataforma-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .card-plataforma-nome {
+            font-family: var(--font-titulo);
+            font-size: 1.3rem;
+            color: var(--cor-destaque);
+            margin-bottom: 0.5rem;
+        }
+
+        .card-plataforma-desc {
+            font-size: 0.9rem;
+            color: var(--cor-texto);
             opacity: 0.8;
         }
 
-        /* Responsividade */
-        @media (max-width: 600px) {
-            #capa h1 {
+        /* REFLEXÃO SEMANAL */
+        #reflexao {
+            background: linear-gradient(135deg, #FBF9F3 0%, #F5F1E8 100%);
+        }
+
+        .card-reflexao {
+            background: var(--cor-card);
+            padding: 2.5rem;
+            border-radius: 15px;
+            border: 2px solid var(--cor-destaque);
+            max-width: 600px;
+            margin: 2rem auto;
+            animation: fadeIn 0.6s ease-in;
+        }
+
+        .reflexao-data {
+            font-size: 0.85rem;
+            color: var(--cor-destaque);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .reflexao-versiculo {
+            font-style: italic;
+            font-size: 1.1rem;
+            color: var(--cor-destaque);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--cor-leve);
+        }
+
+        .reflexao-meditacao {
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            color: var(--cor-texto);
+        }
+
+        .reflexao-final {
+            text-align: center;
+            font-size: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        /* VÍDEOS */
+        .videos-container {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .card-video {
+            background: var(--cor-card);
+            border-radius: 15px;
+            border: 1px solid var(--cor-leve);
+            overflow: hidden;
+            transition: all 0.3s ease;
+            animation: fadeIn 0.6s ease-in;
+        }
+
+        .card-video:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 35px rgba(122, 139, 111, 0.1);
+        }
+
+        .video-thumbnail {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            background: linear-gradient(135deg, var(--cor-leve), var(--cor-destaque));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+        }
+
+        .video-info {
+            padding: 1.5rem;
+        }
+
+        .video-titulo {
+            font-family: var(--font-titulo);
+            font-size: 1.2rem;
+            color: var(--cor-destaque);
+            margin-bottom: 0.5rem;
+        }
+
+        .video-duracao {
+            font-size: 0.85rem;
+            color: var(--cor-texto);
+            opacity: 0.7;
+            margin-bottom: 1rem;
+        }
+
+        .btn-video {
+            background-color: var(--cor-destaque);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .btn-video:hover {
+            background-color: var(--cor-texto);
+            transform: translateX(4px);
+        }
+
+        /* REDES SOCIAIS */
+        .redes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .card-rede {
+            background: var(--cor-card);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid var(--cor-leve);
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            animation: fadeIn 0.6s ease-in;
+        }
+
+        .card-rede:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(122, 139, 111, 0.15);
+            border-color: var(--cor-destaque);
+        }
+
+        .card-rede-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .card-rede-nome {
+            font-family: var(--font-titulo);
+            font-size: 1.1rem;
+            color: var(--cor-destaque);
+            margin-bottom: 0.5rem;
+        }
+
+        .card-rede-desc {
+            font-size: 0.85rem;
+            color: var(--cor-texto);
+            opacity: 0.8;
+        }
+
+        /* RODAPÉ */
+        footer {
+            background: var(--cor-texto);
+            color: white;
+            text-align: center;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .rodape-frase {
+            font-size: 1.1rem;
+            font-style: italic;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+            opacity: 0.95;
+        }
+
+        .rodape-info {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 1.5rem;
+        }
+
+        .rodape-info a {
+            color: var(--cor-leve);
+        }
+
+        .rodape-info a:hover {
+            color: white;
+        }
+
+        /* RESPONSIVIDADE */
+        @media (max-width: 768px) {
+            .titulo-principal {
                 font-size: 2.2rem;
             }
-            section {
-                padding: 60px 0;
+
+            .frase-principal {
+                font-size: 1.1rem;
             }
-            .sobre-conteudo, .reflexao-card {
-                padding: 24px;
+
+            .secao-titulo {
+                font-size: 1.6rem;
+            }
+
+            nav {
+                display: none;
+            }
+
+            section {
+                padding: 3rem 1.5rem;
+            }
+
+            .plataformas-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .redes-grid {
+                grid-template-columns: 1fr;
             }
         }
+
+        /* SMOOTH SCROLL INDICATOR */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateX(-50%) translateY(0);
+                opacity: 1;
+            }
+            50% {
+                transform: translateX(-50%) translateY(10px);
+                opacity: 0.7;
+            }
+        }
+
+        /* DELAY ANIMAÇÕES */
+        .plataformas-grid .card-plataforma:nth-child(1) { animation-delay: 0.1s; }
+        .plataformas-grid .card-plataforma:nth-child(2) { animation-delay: 0.2s; }
+        .plataformas-grid .card-plataforma:nth-child(3) { animation-delay: 0.3s; }
+        .plataformas-grid .card-plataforma:nth-child(4) { animation-delay: 0.4s; }
+        .plataformas-grid .card-plataforma:nth-child(5) { animation-delay: 0.5s; }
+
+        .redes-grid .card-rede:nth-child(1) { animation-delay: 0.1s; }
+        .redes-grid .card-rede:nth-child(2) { animation-delay: 0.2s; }
+        .redes-grid .card-rede:nth-child(3) { animation-delay: 0.3s; }
+        .redes-grid .card-rede:nth-child(4) { animation-delay: 0.4s; }
     </style>
 </head>
 <body>
-    <!-- Capa -->
+    <!-- HEADER -->
+    <header>
+        <div class="logo-header">Voz, Violão e Fé</div>
+        <nav>
+            <a href="#sobre">Sobre</a>
+            <a href="#plataformas">Ouça</a>
+            <a href="#reflexao">Reflexão</a>
+            <a href="#videos">Vídeos</a>
+            <a href="#redes">Comunidade</a>
+        </nav>
+    </header>
+
+    <!-- CAPA -->
     <section id="capa">
-        <div class="container">
-            <h1>Voz, Violão e Fé</h1>
-            <p>Canções e reflexões inspiradas na Palavra de Deus.</p>
-            <a href="#plataformas" class="btn">Ouça agora</a>
+        <div class="logo-capa">
+            <img src="capa.jpg" alt="Eduardo Rodriguess - Voz, Violão e Fé">
         </div>
+        <h1 class="titulo-principal">Voz, Violão e Fé</h1>
+        <p class="frase-principal">Canções e reflexões inspiradas na Palavra de Deus</p>
+        <button class="btn-primario" onclick="document.getElementById('plataformas').scrollIntoView({behavior: 'smooth'})">Ouça agora</button>
+        <div class="scroll-indicator">↓</div>
     </section>
 
-    <!-- O Projeto -->
+    <!-- SOBRE O PROJETO -->
     <section id="sobre">
-        <div class="container">
-            <h2 class="secao-titulo">O Voz, Violão e Fé</h2>
-            <div class="sobre-conteudo">
-                <p>O Voz, Violão e Fé nasceu do desejo de transformar a Palavra de Deus em canções e reflexões que acompanhem as pessoas em sua caminhada de fé. Aqui você encontrará músicas autorais, interpretações e mensagens inspiradas na Bíblia, todas com um mesmo propósito: conduzir o coração para mais perto de Deus.</p>
-                <p class="versiculo">"Buscar-me-eis e me achareis quando me buscardes de todo o vosso coração."<br>Jeremias 29:13</p>
+        <h2 class="secao-titulo">Sobre o Projeto</h2>
+        <div class="sobre-conteudo">
+            <p>O <strong>Voz, Violão e Fé</strong> nasceu do desejo de transformar a Palavra de Deus em canções e reflexões que acompanhem as pessoas em sua caminhada de fé.</p>
+            
+            <p>Aqui você encontrará músicas autorais, interpretações e mensagens inspiradas na Bíblia, todas com um mesmo propósito: <em>conduzir o coração para mais perto de Deus.</em></p>
+            
+            <div class="sobre-versículo">
+                "Buscar-me-eis e me achareis quando me buscardes de todo o vosso coração." <br>
+                <strong>Jeremias 29:13</strong>
             </div>
         </div>
     </section>
 
-    <!-- Plataformas -->
+    <!-- OUÇA NAS PLATAFORMAS -->
     <section id="plataformas">
-        <div class="container">
-            <h2 class="secao-titulo">🎵 Ouça nas plataformas</h2>
-            <p style="text-align:center; margin-bottom:32px;">Escolha a sua plataforma favorita e leve estas canções com você, onde estiver.</p>
-            <div class="grid-cards">
-                <a href="#" class="card">
-                    <h3>Spotify</h3>
-                    <p>Ouça todos os lançamentos.</p>
-                </a>
-                <a href="#" class="card">
-                    <h3>YouTube</h3>
-                    <p>Acesse os vídeos e gravações.</p>
-                </a>
-                <a href="#" class="card">
-                    <h3>Deezer</h3>
-                    <p>Ouça quando e onde quiser.</p>
-                </a>
-                <a href="#" class="card">
-                    <h3>Apple Music</h3>
-                    <p>Adicione às suas playlists.</p>
-                </a>
-                <a href="#" class="card">
-                    <h3>Amazon Music</h3>
-                    <p>Leve a música com você.</p>
-                </a>
-            </div>
+        <h2 class="secao-titulo">🎵 Ouça nas Plataformas</h2>
+        <p class="secao-subtitulo">Escolha a sua plataforma favorita e leve estas canções com você, onde estiver.</p>
+        
+        <div class="plataformas-grid">
+            <a href="https://open.spotify.com/artist/3SjQFPEkSzaMRbcIBkfqlY?si=dgIFy8KqSHW8qfN5OY8ekw&utm_source=copy-link" target="_blank" class="card-plataforma">
+                <div class="card-plataforma-icon">🎧</div>
+                <div class="card-plataforma-nome">Spotify</div>
+                <div class="card-plataforma-desc">Ouça todos os lançamentos</div>
+            </a>
+
+            <a href="https://www.youtube.com/@vozviolaoefe" target="_blank" class="card-plataforma">
+                <div class="card-plataforma-icon">▶️</div>
+                <div class="card-plataforma-nome">YouTube</div>
+                <div class="card-plataforma-desc">Vídeos e clipes</div>
+            </a>
+
+            <a href="https://www.deezer.com/br/artist/71534322" target="_blank" class="card-plataforma">
+                <div class="card-plataforma-icon">🎵</div>
+                <div class="card-plataforma-nome">Deezer</div>
+                <div class="card-plataforma-desc">Ouça em alta qualidade</div>
+            </a>
+
+            <a href="https://music.apple.com/us/artist/eduardo-rodriguess/1832821292" target="_blank" class="card-plataforma">
+                <div class="card-plataforma-icon">🍎</div>
+                <div class="card-plataforma-nome">Apple Music</div>
+                <div class="card-plataforma-desc">Na sua biblioteca</div>
+            </a>
+
+            <a href="https://music.amazon.com.br/albums/B0H6QWJ13Z?marketplaceId=A2Q3Y263D00KWC&musicTerritory=BR&ref=dm_sh_j13QAL4eUYYMZ3dIWcHDC6mSY" target="_blank" class="card-plataforma">
+                <div class="card-plataforma-icon">📦</div>
+                <div class="card-plataforma-nome">Amazon Music</div>
+                <div class="card-plataforma-desc">Explore e salve</div>
+            </a>
         </div>
     </section>
 
-    <!-- Reflexão -->
+    <!-- REFLEXÃO SEMANAL -->
     <section id="reflexao">
-        <div class="container">
-            <h2 class="secao-titulo">📖 Uma Palavra para Esta Semana</h2>
-            <p style="text-align:center; margin-bottom:32px;">Uma breve pausa para meditar na Palavra de Deus.</p>
-            <div class="reflexao-card">
-                <p class="data-reflexao">Semana 34 • Agosto de 2026</p>
-                <h3>📖 Versículo</h3>
-                <p style="margin:16px 0;">Aqui ficará o versículo da semana...</p>
-                <h3>💭 Reflexão</h3>
-                <p style="margin:16px 0;">Aqui ficará a reflexão curta para acompanhar o versículo...</p>
-                <p style="text-align:center; margin-top:24px; color:#556B2F; font-style:italic;">🙏 Que Deus abençoe a sua caminhada.</p>
+        <h2 class="secao-titulo">📖 Uma Palavra para Esta Semana</h2>
+        <p class="secao-subtitulo">Uma breve pausa para meditar na Palavra de Deus</p>
+        
+        <div class="card-reflexao">
+            <div class="reflexao-data">Semana 31 • Julho de 2026</div>
+            
+            <div class="reflexao-versiculo">
+                "Assim disse o SENHOR: Na hora da graça, te ouvi; no dia da salvação, te socorri."<br>
+                <strong>Isaías 49:8</strong>
+            </div>
+            
+            <div class="reflexao-meditacao">
+                Às vezes sentimos que Deus está longe, que nossas orações não chegam até Ele. Mas esta promessa nos assegura que Ele sempre nos ouve. No tempo certo, na Sua hora, o Senhor responde. Confie nesta certeza hoje.
+            </div>
+            
+            <div class="reflexao-final">🙏</div>
+            
+            <div style="text-align: center; margin-top: 1.5rem; font-style: italic; font-size: 0.95rem; color: var(--cor-destaque);">
+                Que Deus abençoe a sua caminhada.
             </div>
         </div>
     </section>
 
-    <!-- Vídeos -->
+    <!-- ÚLTIMOS VÍDEOS -->
     <section id="videos">
-        <div class="container">
-            <h2 class="secao-titulo">🎥 Últimos vídeos</h2>
-            <p style="text-align:center; margin-bottom:32px;">Acompanhe interpretações, canções autorais e reflexões em voz e violão.</p>
-            <div class="grid-cards">
-                <div class="video-card">
-                    <div class="video-placeholder">Thumbnail do vídeo</div>
-                    <div class="video-info">
-                        <h3>Título do vídeo</h3>
-                        <p class="duracao">Duração: 4:20</p>
-                        <a href="#" class="btn">Assistir</a>
-                    </div>
+        <h2 class="secao-titulo">🎥 Últimos Vídeos</h2>
+        <p class="secao-subtitulo">Acompanhe interpretações, canções autorais e reflexões em voz e violão</p>
+        
+        <div class="videos-container">
+            <a href="https://youtu.be/-4uZ4qxY_MQ?si=s8cGk9aA4T2QxJKQ" target="_blank" class="card-video">
+                <div class="video-thumbnail">🎬</div>
+                <div class="video-info">
+                    <div class="video-titulo">Te Encontro Perto | Lyric Video Oficial</div>
+                    <div class="video-duracao">2:50 • Lançamento recente</div>
+                    <button class="btn-video">Assistir</button>
                 </div>
-            </div>
+            </a>
+
+            <a href="https://youtu.be/-RV7wLPwgoU?si=WQ-ASMA4ToipKNHg" target="_blank" class="card-video">
+                <div class="video-thumbnail">🎬</div>
+                <div class="video-info">
+                    <div class="video-titulo">De que adianta construir sem Deus? (Salmo 127)</div>
+                    <div class="video-duracao">3:11 • Reflexão</div>
+                    <button class="btn-video">Assistir</button>
+                </div>
+            </a>
+
+            <a href="https://youtu.be/vny0OrKN9Zc?si=ZOWZHIR0thw5_Yd0" target="_blank" class="card-video">
+                <div class="video-thumbnail">🎬</div>
+                <div class="video-info">
+                    <div class="video-titulo">Enquanto Podemos (João 12:35)</div>
+                    <div class="video-duracao">2:40 • Mensagem</div>
+                    <button class="btn-video">Assistir</button>
+                </div>
+            </a>
         </div>
     </section>
 
-    <!-- Acompanhe -->
-    <section id="acompanhe">
-        <div class="container">
-            <h2 class="secao-titulo">🤝 Caminhe conosco</h2>
-            <p style="text-align:center; margin-bottom:32px;">Acompanhe novos lançamentos, reflexões e canções também nas redes sociais.</p>
-            <div class="grid-cards">
-                <a href="#" class="card">
-                    <h3>Canal do WhatsApp</h3>
-                    <p>Receba avisos, reflexões e novidades em primeira mão.</p>
-                </a>
-                <a href="#" class="card">
-                    <h3>Instagram</h3>
-                    <p>Conteúdo diário e por trás das câmeras.</p>
-                </a>
-                <a href="#" class="card">
-                    <h3>YouTube</h3>
-                    <p>Todos os vídeos completos.</p>
-                </a>
-                <a href="#" class="card">
-                    <h3>TikTok</h3>
-                    <p>Trechos e reflexões rápidas.</p>
-                </a>
-            </div>
+    <!-- CAMINHE CONOSCO -->
+    <section id="redes">
+        <h2 class="secao-titulo">🤝 Caminhe Conosco</h2>
+        <p class="secao-subtitulo">Acompanhe novos lançamentos, reflexões e canções também nas redes sociais</p>
+        
+        <div class="redes-grid">
+            <a href="https://www.instagram.com/vozviolaoefe/" target="_blank" class="card-rede">
+                <div class="card-rede-icon">📷</div>
+                <div class="card-rede-nome">Instagram</div>
+                <div class="card-rede-desc">Bastidores e momentos</div>
+            </a>
+
+            <a href="https://www.tiktok.com/@vozviolaoefe" target="_blank" class="card-rede">
+                <div class="card-rede-icon">🎵</div>
+                <div class="card-rede-nome">TikTok</div>
+                <div class="card-rede-desc">Cortes e conteúdos rápidos</div>
+            </a>
+
+            <a href="https://www.youtube.com/@vozviolaoefe" target="_blank" class="card-rede">
+                <div class="card-rede-icon">▶️</div>
+                <div class="card-rede-nome">YouTube</div>
+                <div class="card-rede-desc">Vídeos completos</div>
+            </a>
+
+            <a href="https://whatsapp.com/channel/0029VamNEy92975KFtU2be0I" target="_blank" class="card-rede">
+                <div class="card-rede-icon">💬</div>
+                <div class="card-rede-nome">Canal do WhatsApp</div>
+                <div class="card-rede-desc">Reflexões e avisos exclusivos</div>
+            </a>
         </div>
     </section>
 
-    <!-- Rodapé -->
+    <!-- RODAPÉ -->
     <footer>
-        <div class="container">
-            <p>Que estas canções conduzam o seu coração para mais perto de Deus.</p>
-            <p>Contato: seunome@email.com | Voz, Violão e Fé © 2026</p>
+        <div class="rodape-frase">
+            "Que estas canções conduzam o seu coração para mais perto de Deus."
+        </div>
+        <div class="rodape-info">
+            <p>© 2026 Voz, Violão e Fé • Todos os direitos reservados</p>
+            <p style="margin-top: 1rem;">Para contato, acesse nossos canais nas redes sociais</p>
         </div>
     </footer>
+
+    <script>
+        // Smooth scroll para links de navegação
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
