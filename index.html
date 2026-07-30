@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voz, Violão e Fé</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #F8F4E9;
+            color: #3A2F23;
+            line-height: 1.7;
+        }
+
+        h1, h2, h3 {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: #2C2318;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        /* Capa */
+        #capa {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            gap: 24px;
+        }
+
+        #capa h1 {
+            font-size: 3.2rem;
+            font-weight: 400;
+        }
+
+        #capa p {
+            font-size: 1.25rem;
+            max-width: 600px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            background-color: #556B2F;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 500;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #3D4F21;
+        }
+
+        /* Seções gerais */
+        .secao-titulo {
+            font-size: 2rem;
+            margin-bottom: 32px;
+            text-align: center;
+        }
+
+        .sobre-conteudo {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .versiculo {
+            font-style: italic;
+            color: #556B2F;
+            text-align: center;
+            font-size: 1.1rem;
+            margin-top: 16px;
+        }
+
+        /* Cards plataformas */
+        .grid-cards {
+            display: grid;
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 32px;
+            border-radius: 16px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+        }
+
+        .card h3 {
+            margin-bottom: 8px;
+            color: #556B2F;
+        }
+
+        /* Reflexão */
+        .reflexao-card {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .data-reflexao {
+            text-align: right;
+            font-size: 0.9rem;
+            color: #7A6A56;
+            margin-bottom: 24px;
+        }
+
+        /* Vídeos */
+        .video-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .video-placeholder {
+            background-color: #E4E0D5;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #7A6A56;
+        }
+
+        .video-info {
+            padding: 24px;
+        }
+
+        .duracao {
+            color: #7A6A56;
+            font-size: 0.9rem;
+            margin: 8px 0 16px;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #2C2318;
+            color: #F8F4E9;
+            text-align: center;
+            padding: 48px 24px;
+        }
+
+        footer p {
+            margin-bottom: 16px;
+            opacity: 0.8;
+        }
+
+        /* Responsividade */
+        @media (max-width: 600px) {
+            #capa h1 {
+                font-size: 2.2rem;
+            }
+            section {
+                padding: 60px 0;
+            }
+            .sobre-conteudo, .reflexao-card {
+                padding: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Capa -->
+    <section id="capa">
+        <div class="container">
+            <h1>Voz, Violão e Fé</h1>
+            <p>Canções e reflexões inspiradas na Palavra de Deus.</p>
+            <a href="#plataformas" class="btn">Ouça agora</a>
+        </div>
+    </section>
+
+    <!-- O Projeto -->
+    <section id="sobre">
+        <div class="container">
+            <h2 class="secao-titulo">O Voz, Violão e Fé</h2>
+            <div class="sobre-conteudo">
+                <p>O Voz, Violão e Fé nasceu do desejo de transformar a Palavra de Deus em canções e reflexões que acompanhem as pessoas em sua caminhada de fé. Aqui você encontrará músicas autorais, interpretações e mensagens inspiradas na Bíblia, todas com um mesmo propósito: conduzir o coração para mais perto de Deus.</p>
+                <p class="versiculo">"Buscar-me-eis e me achareis quando me buscardes de todo o vosso coração."<br>Jeremias 29:13</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Plataformas -->
+    <section id="plataformas">
+        <div class="container">
+            <h2 class="secao-titulo">🎵 Ouça nas plataformas</h2>
+            <p style="text-align:center; margin-bottom:32px;">Escolha a sua plataforma favorita e leve estas canções com você, onde estiver.</p>
+            <div class="grid-cards">
+                <a href="#" class="card">
+                    <h3>Spotify</h3>
+                    <p>Ouça todos os lançamentos.</p>
+                </a>
+                <a href="#" class="card">
+                    <h3>YouTube</h3>
+                    <p>Acesse os vídeos e gravações.</p>
+                </a>
+                <a href="#" class="card">
+                    <h3>Deezer</h3>
+                    <p>Ouça quando e onde quiser.</p>
+                </a>
+                <a href="#" class="card">
+                    <h3>Apple Music</h3>
+                    <p>Adicione às suas playlists.</p>
+                </a>
+                <a href="#" class="card">
+                    <h3>Amazon Music</h3>
+                    <p>Leve a música com você.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reflexão -->
+    <section id="reflexao">
+        <div class="container">
+            <h2 class="secao-titulo">📖 Uma Palavra para Esta Semana</h2>
+            <p style="text-align:center; margin-bottom:32px;">Uma breve pausa para meditar na Palavra de Deus.</p>
+            <div class="reflexao-card">
+                <p class="data-reflexao">Semana 34 • Agosto de 2026</p>
+                <h3>📖 Versículo</h3>
+                <p style="margin:16px 0;">Aqui ficará o versículo da semana...</p>
+                <h3>💭 Reflexão</h3>
+                <p style="margin:16px 0;">Aqui ficará a reflexão curta para acompanhar o versículo...</p>
+                <p style="text-align:center; margin-top:24px; color:#556B2F; font-style:italic;">🙏 Que Deus abençoe a sua caminhada.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vídeos -->
+    <section id="videos">
+        <div class="container">
+            <h2 class="secao-titulo">🎥 Últimos vídeos</h2>
+            <p style="text-align:center; margin-bottom:32px;">Acompanhe interpretações, canções autorais e reflexões em voz e violão.</p>
+            <div class="grid-cards">
+                <div class="video-card">
+                    <div class="video-placeholder">Thumbnail do vídeo</div>
+                    <div class="video-info">
+                        <h3>Título do vídeo</h3>
+                        <p class="duracao">Duração: 4:20</p>
+                        <a href="#" class="btn">Assistir</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Acompanhe -->
+    <section id="acompanhe">
+        <div class="container">
+            <h2 class="secao-titulo">🤝 Caminhe conosco</h2>
+            <p style="text-align:center; margin-bottom:32px;">Acompanhe novos lançamentos, reflexões e canções também nas redes sociais.</p>
+            <div class="grid-cards">
+                <a href="#" class="card">
+                    <h3>Canal do WhatsApp</h3>
+                    <p>Receba avisos, reflexões e novidades em primeira mão.</p>
+                </a>
+                <a href="#" class="card">
+                    <h3>Instagram</h3>
+                    <p>Conteúdo diário e por trás das câmeras.</p>
+                </a>
+                <a href="#" class="card">
+                    <h3>YouTube</h3>
+                    <p>Todos os vídeos completos.</p>
+                </a>
+                <a href="#" class="card">
+                    <h3>TikTok</h3>
+                    <p>Trechos e reflexões rápidas.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <p>Que estas canções conduzam o seu coração para mais perto de Deus.</p>
+            <p>Contato: seunome@email.com | Voz, Violão e Fé © 2026</p>
+        </div>
+    </footer>
+</body>
+</html>
