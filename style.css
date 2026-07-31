@@ -19,10 +19,11 @@ body {
 .capa-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover;       /* ajusta sem distorcer */
   filter: brightness(80%);
 }
 
+/* Texto da capa */
 .capa-texto {
   position: absolute;
   top: 50%;
@@ -32,16 +33,7 @@ body {
   color: #3b2f2f;
 }
 
-.capa-texto h1 {
-  font-size: 2.8em;
-  margin-bottom: 10px;
-}
-
-.capa-texto p {
-  font-size: 1.2em;
-  margin-bottom: 20px;
-}
-
+/* Botão */
 .btn {
   background-color: #6b8e23;
   color: white;
@@ -49,11 +41,12 @@ body {
   border-radius: 25px;
   text-decoration: none;
   font-weight: bold;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .btn:hover {
   background-color: #556b2f;
+  transform: scale(1.1);
 }
 
 /* Seções */
@@ -66,7 +59,6 @@ section {
 }
 
 h1, h2 {
-  font-family: 'Georgia', serif;
   margin-bottom: 20px;
 }
 
@@ -82,7 +74,7 @@ h1, h2 {
   background: white;
   border-radius: 15px;
   padding: 20px;
-  width: 250px;
+  width: 220px;              /* largura fixa */
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
 }
@@ -93,17 +85,20 @@ h1, h2 {
 
 /* Ícones */
 .icon {
-  width: 60px;
-  height: 60px;
-  object-fit: contain;
+  width: 50px;               /* tamanho fixo menor */
+  height: 50px;
+  object-fit: contain;        /* mantém proporção */
   background-color: transparent;
-  border-radius: 10px;
   margin-bottom: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Miniaturas de vídeo */
 .thumb {
   width: 100%;
+  max-width: 300px;           /* limita tamanho */
   height: auto;
   border-radius: 10px;
   object-fit: cover;
@@ -132,20 +127,12 @@ footer {
 
 /* Responsividade */
 @media (max-width: 768px) {
-  .capa-texto h1 {
-    font-size: 2em;
-  }
-
-  .capa-texto p {
-    font-size: 1em;
-  }
-
   .card {
     width: 90%;
   }
 
   .icon {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
   }
-}
+  }
