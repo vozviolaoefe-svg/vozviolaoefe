@@ -1,3 +1,4 @@
+/* Estilo geral */
 body {
   font-family: 'Georgia', serif;
   background-color: #f5f5dc;
@@ -20,6 +21,7 @@ body {
   height: 100%;
   object-fit: cover;
   filter: brightness(80%);
+  animation: fadeIn 2s ease-in-out;
 }
 
 .capa-texto {
@@ -29,61 +31,44 @@ body {
   transform: translate(-50%, -50%);
   text-align: center;
   color: #3b2f2f;
+  animation: fadeInUp 2s ease-in-out;
+}
+
+.capa-texto h1 {
+  font-size: 2.8em;
+  margin-bottom: 10px;
+}
+
+.capa-texto p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
 }
 
 .btn {
   background-color: #6b8e23;
   color: white;
-  padding: 10px 25px;
+  padding: 12px 30px;
   border-radius: 25px;
   text-decoration: none;
   font-weight: bold;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .btn:hover {
   background-color: #556b2f;
+  transform: scale(1.1);
 }
 
 /* Seções */
 section {
   padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 1.5s ease-in-out;
 }
 
 h1, h2 {
   font-family: 'Georgia', serif;
-  margin-bottom: 20px;
-}
-
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-.card {
-  background: white;
-  border-radius: 15px;
-  padding: 20px;
-  width: 250px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-}
-
-.card:hover {
-  transform: scale(1.05);
-}
-
-.icon {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 10px;
-}
-
-footer {
-  background-color: #3b2f2f;
-  color: #f5f5dc;
-  padding: 20px;
-  font-size: 0.9em;
-}
+  margin-bottom
