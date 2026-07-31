@@ -21,7 +21,6 @@ body {
   height: 100%;
   object-fit: cover;
   filter: brightness(80%);
-  animation: fadeIn 2s ease-in-out;
 }
 
 .capa-texto {
@@ -31,7 +30,6 @@ body {
   transform: translate(-50%, -50%);
   text-align: center;
   color: #3b2f2f;
-  animation: fadeInUp 2s ease-in-out;
 }
 
 .capa-texto h1 {
@@ -51,12 +49,11 @@ body {
   border-radius: 25px;
   text-decoration: none;
   font-weight: bold;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 .btn:hover {
   background-color: #556b2f;
-  transform: scale(1.1);
 }
 
 /* Seções */
@@ -66,9 +63,89 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  animation: fadeIn 1.5s ease-in-out;
 }
 
 h1, h2 {
   font-family: 'Georgia', serif;
-  margin-bottom
+  margin-bottom: 20px;
+}
+
+/* Cards */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Ícones */
+.icon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  background-color: transparent;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* Miniaturas de vídeo */
+.thumb {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Texto */
+p {
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+blockquote {
+  font-style: italic;
+  color: #4b3f3f;
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+/* Rodapé */
+footer {
+  background-color: #3b2f2f;
+  color: #f5f5dc;
+  padding: 20px;
+  font-size: 0.9em;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .capa-texto h1 {
+    font-size: 2em;
+  }
+
+  .capa-texto p {
+    font-size: 1em;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .icon {
+    width: 50px;
+    height: 50px;
+  }
+}
