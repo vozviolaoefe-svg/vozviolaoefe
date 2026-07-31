@@ -43,11 +43,11 @@
         .card-plataforma, .card-rede { background: var(--cor-card); padding: 2rem; border-radius: 15px; border: 1px solid var(--cor-leve); text-align: center; cursor: pointer; transition: all 0.3s ease; animation: fadeIn 0.6s ease-in; display: flex; flex-direction: column; align-items: center; }
         .card-plataforma:hover, .card-rede:hover { transform: translateY(-8px); box-shadow: 0 15px 40px rgba(122,139,111,0.15); border-color: var(--cor-destaque); }
         
-        /* Ajuste EXATO para os SEUS arquivos */
-        .icone-container { width: 85px; height: 85px; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; background: transparent !important; }
-        .icone-container img { width: 100%; height: 100%; object-fit: contain; background: transparent !important; display: block; }
-        .icone-container-rede { width: 75px; height: 75px; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; background: transparent !important; }
-        .icone-container-rede img { width: 100%; height: 100%; object-fit: contain; background: transparent !important; display: block; }
+        /* Tamanho aumentado e sem fundo */
+        .icone-container { width: 100px; height: 100px; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; }
+        .icone-container img { width: 100%; height: 100%; object-fit: contain; mix-blend-mode: multiply; }
+        .icone-container-rede { width: 90px; height: 90px; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; }
+        .icone-container-rede img { width: 100%; height: 100%; object-fit: contain; mix-blend-mode: multiply; }
         
         .card-plataforma-nome, .card-rede-nome { font-family: var(--font-titulo); font-size: 1.3rem; color: var(--cor-destaque); margin-bottom: 0.5rem; }
         .card-plataforma-desc, .card-rede-desc { font-size: 0.9rem; opacity: 0.8; }
@@ -112,7 +112,7 @@
                 <div class="card-plataforma-desc">Ouça em alta qualidade</div>
             </a>
             <a href="https://music.apple.com/us/artist/eduardo-rodriguess/1832821292" target="_blank" class="card-plataforma">
-                <div class="icone-container"><img src="applemusic.png" alt="Apple Music"></div>
+                <div class="icone-container"><img src="applemusic.png" alt="Apple Music" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Apple_Music_logo.svg/512px-Apple_Music_logo.svg.png'; this.style.mixBlendMode='normal'"></div>
                 <div class="card-plataforma-nome">Apple Music</div>
                 <div class="card-plataforma-desc">Na sua biblioteca</div>
             </a>
