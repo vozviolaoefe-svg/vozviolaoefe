@@ -1,21 +1,14 @@
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Georgia', serif;
   background-color: #f5f5dc;
   color: #3b2f2f;
   margin: 0;
   padding: 0;
+  text-align: center;
   scroll-behavior: smooth;
 }
 
-section {
-  padding: 60px 20px;
-  text-align: center;
-}
-
-h1, h2 {
-  font-family: 'Georgia', serif;
-}
-
+/* Capa */
 .capa {
   position: relative;
   height: 100vh;
@@ -52,6 +45,16 @@ h1, h2 {
   background-color: #556b2f;
 }
 
+/* Seções */
+section {
+  padding: 60px 20px;
+}
+
+h1, h2 {
+  font-family: 'Georgia', serif;
+  margin-bottom: 20px;
+}
+
 .cards {
   display: flex;
   flex-wrap: wrap;
@@ -63,7 +66,7 @@ h1, h2 {
   background: white;
   border-radius: 15px;
   padding: 20px;
-  width: 200px;
+  width: 250px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
 }
@@ -75,3 +78,12 @@ h1, h2 {
 .icon {
   width: 60px;
   height: 60px;
+  margin-bottom: 10px;
+}
+
+footer {
+  background-color: #3b2f2f;
+  color: #f5f5dc;
+  padding: 20px;
+  font-size: 0.9em;
+}
