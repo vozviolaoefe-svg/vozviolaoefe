@@ -43,11 +43,11 @@
         .card-plataforma, .card-rede { background: var(--cor-card); padding: 2rem; border-radius: 15px; border: 1px solid var(--cor-leve); text-align: center; cursor: pointer; transition: all 0.3s ease; animation: fadeIn 0.6s ease-in; display: flex; flex-direction: column; align-items: center; }
         .card-plataforma:hover, .card-rede:hover { transform: translateY(-8px); box-shadow: 0 15px 40px rgba(122,139,111,0.15); border-color: var(--cor-destaque); }
         
-        /* Tamanho aumentado e sem fundo */
-        .icone-container { width: 100px; height: 100px; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; }
-        .icone-container img { width: 100%; height: 100%; object-fit: contain; mix-blend-mode: multiply; }
-        .icone-container-rede { width: 90px; height: 90px; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; }
-        .icone-container-rede img { width: 100%; height: 100%; object-fit: contain; mix-blend-mode: multiply; }
+        /* Tamanho definido grande e limpo */
+        .icone-container { width: 100px; height: 100px; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; background: transparent !important; }
+        .icone-container img { width: 100%; height: 100%; object-fit: contain; background: transparent !important; }
+        .icone-container-rede { width: 90px; height: 90px; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; background: transparent !important; }
+        .icone-container-rede img { width: 100%; height: 100%; object-fit: contain; background: transparent !important; }
         
         .card-plataforma-nome, .card-rede-nome { font-family: var(--font-titulo); font-size: 1.3rem; color: var(--cor-destaque); margin-bottom: 0.5rem; }
         .card-plataforma-desc, .card-rede-desc { font-size: 0.9rem; opacity: 0.8; }
@@ -111,13 +111,15 @@
                 <div class="card-plataforma-nome">Deezer</div>
                 <div class="card-plataforma-desc">Ouça em alta qualidade</div>
             </a>
+            <!-- AQUI JÁ VAI DIRETO O ÍCONE SEM FUNDO -->
             <a href="https://music.apple.com/us/artist/eduardo-rodriguess/1832821292" target="_blank" class="card-plataforma">
-                <div class="icone-container"><img src="applemusic.png" alt="Apple Music" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Apple_Music_logo.svg/512px-Apple_Music_logo.svg.png'; this.style.mixBlendMode='normal'"></div>
+                <div class="icone-container"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Apple_Music_logo.svg/512px-Apple_Music_logo.svg.png" alt="Apple Music"></div>
                 <div class="card-plataforma-nome">Apple Music</div>
                 <div class="card-plataforma-desc">Na sua biblioteca</div>
             </a>
+            <!-- AQUI JÁ VAI DIRETO O ÍCONE SEM FUNDO -->
             <a href="https://music.amazon.com.br/albums/B0H6QWJ13Z?marketplaceId=A2Q3Y263D00KWC&musicTerritory=BR" target="_blank" class="card-plataforma">
-                <div class="icone-container"><img src="amazonmusic.png" alt="Amazon Music"></div>
+                <div class="icone-container"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Amazon_Music_logo_2021.svg/512px-Amazon_Music_logo_2021.svg.png" alt="Amazon Music"></div>
                 <div class="card-plataforma-nome">Amazon Music</div>
                 <div class="card-plataforma-desc">Explore e salve</div>
             </a>
@@ -159,12 +161,12 @@
         <p class="secao-subtitulo">Acompanhe novos lançamentos, reflexões e canções também nas redes sociais</p>
         <div class="redes-grid">
             <a href="https://www.instagram.com/vozviolaoefe/" target="_blank" class="card-rede">
-                <div class="icone-container-rede"><img src="instagram.png" alt="Instagram"></div>
+                <div class="icone-container-rede"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/512px-Instagram_logo_2016.svg.png" alt="Instagram"></div>
                 <div class="card-rede-nome">Instagram</div>
                 <div class="card-rede-desc">Bastidores e momentos</div>
             </a>
             <a href="https://www.tiktok.com/@vozviolaoefe" target="_blank" class="card-rede">
-                <div class="icone-container-rede"><img src="tiktok.png" alt="TikTok"></div>
+                <div class="icone-container-rede"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/TikTok_logo.svg/512px-TikTok_logo.svg.png" alt="TikTok"></div>
                 <div class="card-rede-nome">TikTok</div>
                 <div class="card-rede-desc">Cortes e conteúdos rápidos</div>
             </a>
@@ -191,10 +193,7 @@
 
     <script>
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', e => {
-                e.preventDefault();
-                document.querySelector(anchor.getAttribute('href'))?.scrollIntoView({behavior:'smooth'});
-            });
+            anchor.addEventListener('click',e=>{e.preventDefault();document.querySelector(anchor.getAttribute('href'))?.scrollIntoView({behavior:'smooth'});});
         });
     </script>
 </body>
